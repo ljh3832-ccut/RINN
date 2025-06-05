@@ -1,10 +1,4 @@
-# Training Integral neural networks.
-
-## Edsr
-```bash
-python edsr.py --integral --batch-size 16
-```
-Specify super resolution scale factor with argument --scale (default=4).
+# Training Re-parameterizable Integral neural networks.
 
 ## Imagenet
 ```bash
@@ -14,10 +8,6 @@ Add --data-parallel to use DataParallel training.
 
 # Evaluation of trained INNs.
 To resample (prune) and evaluate the integral model run commands below:
-## Edsr
-```bash
-python edsr.py --integral --resample --checkpoint=<INTEGRAL MODEL CHECKPOINT> --evaluate --batch-size 16
-```
 
 ## Imagenet
 ```bash
