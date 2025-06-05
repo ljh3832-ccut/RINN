@@ -24,32 +24,54 @@ This library is official implementation of "Lightweight Re-parameterizable Integ
 ## Installation
 
 ```
-git clone https://github.com/TheStageAI/TorchIntegral.git
-pip install TorchIntegral/
+git clone https://github.com/ljh3832-ccut/RINN.git
+pip install RINN/
 ```
 or
 ```
-pip install git+https://github.com/TheStageAI/TorchIntegral.git
+pip install git+https://github.com/ljh3832-ccut/RINN.git
 ```
 
 ## Usage examples
-### Convert your model to integral model:
+### Load RINN model:
 ```python
 import torch
-import torch_integral as inn
-from torchvision.models import resnet18
+import RINN
+PARAMS = {
+        "s0": {"width_multipliers": (0.75, 1.0, 1.0, 2.0), "num_conv_branches": 3},
+        "s1": {"width_multipliers": (1.5, 1.5, 2.0, 2.5), "num_conv_branches": 1},
+        "s2": {"width_multipliers": (1.5, 2.0, 2.5, 4.0), "num_conv_branches": 1},
+        "s3": {"width_multipliers": (2.0, 2.5, 3.0, 4.0), "num_conv_branches": 1},
+        "s4": {"width_multipliers": (3.0, 3.5, 3.5, 4.0), "num_conv_branches": 1, "use_se": True},
+    }
+    variant_params = PARAMS["s0"]
+    net=RINN.rinn(num_classes=1000,  **variant_params)
+    checkpoint="model_eval_123.pth"
+    if checkpoint is not None:
+        with open(checkpoint,"rb") as f:
+            state_dict=torch.load(f)
+        net.load_state_dict(state_dict)
+```
+### Convert RINN to integral model:
+```python
+from torch_integral import standard_continuous_dims
 
-model = resnet18(pretrained=True)
-wrapper = inn.IntegralWrapper(init_from_discrete=True)
+model = net.cuda()
+wrapper = IntegralWrapper(
+    init_from_discrete=True,
+    fuse_bn=True,
+    permutation_iters=3000,
+    optimize_iters=0,
+    start_lr=1e-3,
+    verbose=True,
+)
 
 # Specify continuous dimensions which you want to prune
-continuous_dims = {
-    "layer4.0.conv1.weight": [0],
-    "layer4.1.conv1.weight": [0, 1]
-}
+continuous_dims = standard_continuous_dims(model)
+continuous_dims.update({"linear.weight": [1], "linear.bias": []})
 
 # Convert to integral model
-inn_model = wrapper(model, (1, 3, 224, 224), continuous_dims)
+RINN_model = wrapper(model, [1, 3, 224, 224], continuous_dims)
 ```
 
 Set distribution for random number of integration points:
