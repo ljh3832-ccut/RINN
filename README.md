@@ -121,11 +121,6 @@ More examples can be found in [`examples`](./examples) directory.
 ## Frequently asked questions
 See [FAQ](FAQ.md) for frequently asked questions.
 
-## TODO
-- Add models zoo.
-- Fix tracing of reshape and view operations.
-- Add integral self attention and batch norm layers.
-
 ## Further research
 Here is some ideas for community to continue this research:
 - Weight function parametrization with [SiReN](https://arxiv.org/pdf/2006.09661.pdf).
@@ -139,26 +134,23 @@ Here is some ideas for community to continue this research:
 ## References
 If this work was useful for you, please cite it with:
 ```
-@InProceedings{Solodskikh_2023_CVPR,
-    author    = {Solodskikh, Kirill and Kurbanov, Azim and Aydarkhanov, Ruslan and Zhelavskaya, Irina and Parfenov, Yury and Song, Dehua and Lefkimmiatis, Stamatios},
-    title     = {Integral Neural Networks},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2023},
-    pages     = {16113-16122}
+@article{Lin_2025_TNNLS,
+    author    = {Jin-Hua, Lin and Lin, Ma and Yong-Quan, Yang and Hong-Hai, Sun and Bo-Wen, Ren and Xiang-Dong, Hao},
+    title     = {Lightweight Re-parameterizable Integral Neural Networks for Mobile Applications},
+    journal = {arXiv},
+    year      = {2025},
 }
 ```
 and
 ```
-@misc{TorchIntegral,
-	author={Kurbanov A., Solodskikh K.},
-	title={TorchIntegral},
-	year={2023},
-	url={https://github.com/TheStageAI/TorchIntegral},
+@misc{RINN,
+	author={Jin-Hua Lin, Lin Ma},
+	title={RINN},
+	year={2025},
+	url={https://github.com/ljh3832-ccut/RINN},
 }
 ```
 
-[paper_link]: https://openaccess.thecvf.com/content/CVPR2023/papers/Solodskikh_Integral_Neural_Networks_CVPR_2023_paper.pdf
-[apendix_link]: https://openaccess.thecvf.com/content/CVPR2023/supplemental/Solodskikh_Integral_Neural_Networks_CVPR_2023_supplemental.pdf
-[project_link]: https://inn.thestage.ai/
-[medium_link]: https://medium.com/@TheStage_ai/unlocking-2x-acceleration-for-dnns-transforming-models-with-integral-neural-networks-in-just-1-3b76cbfc4b31
+[paper_link]: https://github.com/ljh3832-ccut/RINN
+[apendix_link]: https://github.com/ljh3832-ccut/RINN
+[project_link]: https://github.com/ljh3832-ccut/RINN
