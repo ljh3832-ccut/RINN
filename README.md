@@ -1,4 +1,6 @@
 # RINN: Official implementation of the "Lightweight Re-parameterizable Integral Neural Networks for Mobile Applications" TNNLS.
+## [[Paper]][paper_link] [[Supplementary]][apendix_link] [[Project site]][project_link]
+
 ## Table of contents
 - [TorchIntegral](#torchintegral)
 - [Requirements](#requirements)
