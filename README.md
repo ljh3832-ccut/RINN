@@ -76,20 +76,20 @@ RINN_model = wrapper(model, [1, 3, 224, 224], continuous_dims)
 
 Set distribution for random number of integration points:
 ```python
-inn_model.groups[0].reset_distribution(inn.UniformDistribution(8, 16))
-inn_model.groups[1].reset_distribution(inn.UniformDistribution(16, 48))
+RINN_model.groups[0].reset_distribution(rinn.UniformDistribution(8, 16))
+RINN_model.groups[1].reset_distribution(rinn.UniformDistribution(16, 48))
 ```
 
 Train integral model using vanilla training methods. 
 Ones the model is trained resample (prune) it to arbitrary size:
 ```python
-inn_model.groups[0].resize(12)
-inn_model.groups[1].resize(16)
+RINN_model.groups[0].resize(12)
+RINN_model.groups[1].resize(16)
 ```
 
 After resampling of the integral model it can be evaluated as usual discrete model:
 ```python
-discrete_model = inn_model.get_unparametrized_model()
+discrete_model = RINN_model.get_unparametrized_model()
 ```
 
 ### One can use [`torch_integral.graph`](./torch_integral/graph/) to build dependecy graph for structured pruning:
