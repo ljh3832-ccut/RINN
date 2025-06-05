@@ -17,14 +17,5 @@ python imagenet.py --integral --resample --evaluate --checkpoint <INTEGRAL MODEL
 
 ### [Checkpoints of trained integral models are available at link][checkpoints_link].
 
-# Fast pruning of DNNs.
-Here we do not train integral neural networks.
-Instead we convert pre-trained DNN to integral and tune integration partition with desired size only.
-
-DNN -> INN -> Integration grid tuning.
-
-```bash
-python edsr.py --integral --resample --grid-tuning --batch-size 16
-```
 
 [checkpoints_link]: https://drive.google.com/drive/folders/1te2HQyCNEIRmN1RbPL2alVN4N-6gT8P9?usp=sharing
