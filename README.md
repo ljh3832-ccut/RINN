@@ -2,7 +2,7 @@
 ## [[Paper]][paper_link] [[Supplementary]][apendix_link] [[Project site]][project_link]
 
 ## Table of contents
-- [TorchIntegral](#torchintegral)
+- [RINN](#RINN)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage examples](#usage-examples)
