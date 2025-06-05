@@ -136,7 +136,7 @@ Here is some ideas for community to continue this research:
 ## References
 If this work was useful for you, please cite it with:
 ```
-@article{Lin_2025_TNNLS,
+@article{Lin_2025_,
     author    = {Jin-Hua, Lin and Lin, Ma and Yong-Quan, Yang and Hong-Hai, Sun and Bo-Wen, Ren and Xiang-Dong, Hao},
     title     = {Lightweight Re-parameterizable Integral Neural Networks for Mobile Applications},
     journal = {arXiv},
