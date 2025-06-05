@@ -1,31 +1,14 @@
-# TorchIntegral: Official implementation of the "Integral Neural Networks" CVPR2023.
-## [[Paper]][paper_link] [[Supplementary]][apendix_link] [[Project site]][project_link] [[Medium article]][medium_link]
-
-![Tux, the Linux mascot](https://drive.google.com/uc?export=download&id=1y_zGfIDp85s9_PIQXyZctQqQm-2G4Q_Y)
-
-# HIRING!
-We are looking for a great DL researchers and DL software engineers to join our journey on building the most efficient Neural Networks
-through the deep diving into physical and math intuition behind.
-
-__Job description__: [AI Engineer](https://lumpy-relation-61f.notion.site/Junior-Middle-AI-Engineer-1580213ae00b45fa890fbcebd7fb15c6?pvs=25)
-
-__Send your CV to__: hr@thestage.ai
-
-__Email subject__: 'DL researcher' or 'DL SE'
-
-__Thestage.ai site__: [thestage.ai](https://thestage.ai)
-
+# RINN: Official implementation of the "Lightweight Re-parameterizable Integral Neural Networks for Mobile Applications" TNNLS.
 ## Table of contents
 - [TorchIntegral](#torchintegral)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage examples](#usage-examples)
 - [Frequently asked questions](#frequently-asked-questions)
-- [TODO](#todo)
 - [Further research](#further-research)
 - [References](#references)
 
-This library is official implementation of ["Integral Neural Networks"][paper_link] paper in Pytorch.
+This library is official implementation of "Lightweight Re-parameterizable Integral Neural Networks for Mobile Applications" paper in Pytorch.
 
 ![Tux, the Linux mascot](Pipeline.png)
 
