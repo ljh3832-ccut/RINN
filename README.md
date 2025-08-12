@@ -10,7 +10,7 @@
 - [Further research](#further-research)
 - [References](#references)
 
-This library is official implementation of "Lightweight Re-parameterizable Integral Neural Networks for Mobile Applications" paper in Pytorch.
+This library is official implementation of "Lightweight Re-parameterizable Integral Neural Networks for Mobile Applications" paper in Windows system and with CUDA libraries.
 
 ![Tux, the Linux mascot](Pipeline.png)
 
